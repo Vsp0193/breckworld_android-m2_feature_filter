@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    tools:context=".activity.RegistrationActivity">
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layoutTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/breck_world_logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/welcome_to_breckworld"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/please_create_your_account_to_start_the_fun"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutTop"
+                android:layout_marginTop="70dp"
+                android:layout_marginHorizontal="60dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/editTextFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rectangle_border"
+                    android:hint="@string/first_name_"
+                    android:inputType="textCapSentences"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:padding="10dp"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorDarkWhite"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/editTextLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rectangle_border"
+                    android:hint="@string/last_name_"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:inputType="textCapSentences"
+                    android:padding="10dp"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorDarkWhite"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/editTextEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rectangle_border"
+                    android:hint="@string/email_address"
+                    android:inputType="textCapSentences"
+                    android:padding="10dp"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorDarkWhite"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutMain"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="We only ever use your email address to let you know about fun new things that have been added to the app or to contact you about larger value prizes that you've won inside BreckWorld. \n\nWe never, ever share your email address with any third party."
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textViewNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textViewLogin"
+                android:layout_centerHorizontal="true"
+                android:text="@string/next"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="40dp"
+                android:text="@string/already_have_an_account_login_here"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

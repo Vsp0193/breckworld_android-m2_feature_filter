@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="58dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@color/header_color"
+    android:paddingBottom="5dp"
+    android:weightSum="5">
+
+    <RelativeLayout
+        android:id="@+id/layoutHome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/imageViewHome"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="7dp"
+            android:src="@drawable/active_home"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/imageViewHomeBadge"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:src="@drawable/bg_filled_circle"
+            app:tint="@color/colorRed"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_below="@+id/imageViewHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Home"
+            android:textSize="14sp"
+            android:layout_marginTop="-5dp"
+            android:textColor="@color/colorWhite"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutGeoStore"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/imageViewGeoStore"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="7dp"
+            android:padding="1dp"
+            android:src="@drawable/not_active_geostore"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/imageViewGeoStoreBadge"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:src="@drawable/bg_filled_circle"
+            app:tint="@color/colorRed"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_below="@+id/imageViewGeoStore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GeoStore"
+            android:textSize="14sp"
+            android:layout_marginTop="-5dp"
+            android:textColor="@color/colorWhite"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutFavourites"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/imageViewFav"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="7dp"
+            android:src="@drawable/not_active_fav"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/imageViewFavBadge"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:src="@drawable/bg_filled_circle"
+            app:tint="@color/colorRed"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_below="@+id/imageViewFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Favourites"
+            android:textSize="14sp"
+            android:layout_marginTop="-5dp"
+            android:textColor="@color/colorWhite"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutHistory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/imageViewHistory"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="7dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/not_active_history"/>
+
+        <ImageView
+            android:id="@+id/imageViewHistoryBadge"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:src="@drawable/bg_filled_circle"
+            app:tint="@color/colorRed"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_below="@+id/imageViewHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text=" History"
+            android:textSize="14sp"
+            android:layout_marginTop="-5dp"
+            android:textColor="@color/colorWhite"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutWallet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/imageViewWallet"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="7dp"
+            android:src="@drawable/not_active_wallet"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/imageViewWalletBadge"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:src="@drawable/bg_filled_circle"
+            app:tint="@color/colorRed"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_below="@+id/imageViewWallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Wallet"
+            android:textSize="14sp"
+            android:layout_marginTop="-5dp"
+            android:textColor="@color/colorWhite"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

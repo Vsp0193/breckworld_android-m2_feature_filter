@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "813361751468",
+    "firebase_url": "https://breckworld-cc8cf.firebaseio.com",
+    "project_id": "breckworld-cc8cf",
+    "storage_bucket": "breckworld-cc8cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813361751468:android:8d847c8b2119a67b",
+        "android_client_info": {
+          "package_name": "com.breckworld"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "813361751468-o5ikt80nj8vsrvi3r79e3vkq0bottmj8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgV4EZGQavgFSbeFcHOyrvVA6g9r-I4EI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "813361751468-o5ikt80nj8vsrvi3r79e3vkq0bottmj8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

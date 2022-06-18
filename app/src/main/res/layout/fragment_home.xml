@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.breckworld.ui.main.home.HomeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/vrplayer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cl_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="40"
+            app:srcCompat="@drawable/homemain" />
+
+        <View
+            android:id="@+id/view_guide_vrplayer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/colorTransparent"
+            app:layout_constraintBottom_toBottomOf="@+id/vrplayer"
+            app:layout_constraintEnd_toEndOf="@+id/vrplayer"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/vrplayer"
+            app:layout_constraintTop_toTopOf="@+id/vrplayer"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            android:background="@color/colorWhite"
+            app:layout_constraintVertical_weight="60"
+            app:layout_constraintTop_toBottomOf="@+id/vrplayer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/tv_towns_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:textColor="#242526"
+                android:textSize="21sp"
+                android:fontFamily="@font/lato_black"
+                android:text="@string/towns_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/rv_towns"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_towns"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                tools:listitem="@layout/item_home_preview"
+                app:layout_constraintTop_toBottomOf="@+id/tv_towns_title"
+                app:layout_constraintBottom_toTopOf="@+id/tv_fun_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_fun_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:textColor="#242526"
+                android:textSize="21sp"
+                android:fontFamily="@font/lato_black"
+                android:text="@string/fun_title"
+                app:layout_constraintTop_toBottomOf="@+id/rv_towns"
+                app:layout_constraintBottom_toTopOf="@+id/rv_fun"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_fun"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                tools:listitem="@layout/item_home_preview"
+                app:layout_constraintTop_toBottomOf="@+id/tv_fun_title"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.breckworld.ui.login.signIn.SignInViewModel" />
+    </data>
+
+    <!--<RelativeLayout
+        android:id="@+id/layoutRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/image_view_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:onClick="@{()->viewModel.onBack()}"
+                android:padding="4dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_back"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/text_view_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/welcome_back"
+                android:textColor="@color/colorWoodsmoke"
+                android:textSize="32sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/image_view_logo"
+                app:lineHeight="32sp" />
+
+            <ImageView
+                android:id="@+id/image_view_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/text_view_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:srcCompat="@drawable/ic_login_logo"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/text_view_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_regular"
+                android:text="@string/app_name"
+                android:textColor="@color/colorDarkGreen"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/edit_text_username"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_view_logo"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:lineHeight="24sp" />
+
+            <EditText
+                android:id="@+id/edit_text_username"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="22dp"
+                android:background="@drawable/bg_white_bottom_line_silver"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato_regular"
+                android:gravity="center_vertical|start"
+                android:hint="@string/username"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                android:text='@={viewModel.username}'
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorSilver"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/edit_text_password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_description" />
+
+            <EditText
+                android:id="@+id/edit_text_password"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:background="@drawable/bg_white_bottom_line_silver"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato_regular"
+                android:gravity="center_vertical|start"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:text='@={viewModel.password}'
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorSilver"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/button_log_in"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_text_username" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_log_in"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="22dp"
+                android:enabled="@{viewModel.isLoginBtnEnabled}"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:onClick="@{()->viewModel.onLogIn()}"
+                android:text="@string/log_in"
+                android:textAllCaps="true"
+                android:textColor="@color/selector_black_silver"
+                app:cornerRadius="4dp"
+                app:layout_constraintBottom_toTopOf="@+id/text_view_create_account_or_login"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_text_password"
+                app:rippleColor="@color/colorSilver"
+                app:strokeColor="@color/selector_black_silver" />
+
+            <TextView
+                android:id="@+id/text_view_create_account_or_login"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/lato_regular"
+                android:gravity="top|center_horizontal"
+                android:onClick="@{()->viewModel.onCreateAccountOrLogin()}"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="@string/create_account_or_login"
+                android:textColor="@color/colorDodgerBlue"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/text_view_terms_of_service"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_log_in"
+                app:lineHeight="24sp"
+                tools:ignore="SmallSp" />
+
+
+            <TextView
+                android:id="@+id/text_view_terms_of_service"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/lato_regular"
+                android:gravity="center"
+                android:onClick="@{()->viewModel.onTermsOfService()}"
+                android:text="@string/terms_of_service"
+                android:textColor="@color/colorDarkGreen"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_create_account_or_login"
+                app:lineHeight="24sp" />
+
+            <TextView
+                android:id="@+id/text_view_privacy_policy"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/lato_regular"
+                android:gravity="center"
+                android:onClick="@{()->viewModel.onPrivacyPolicy()}"
+                android:text="@string/privacy_policy"
+                android:textColor="@color/colorDarkGreen"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/text_view_terms_of_service"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.38"
+                app:layout_constraintStart_toEndOf="@+id/text_view_terms_of_service"
+                app:layout_constraintTop_toTopOf="@+id/text_view_terms_of_service"
+                app:lineHeight="24sp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.489" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--<egolabsapps.basicodemine.videolayout.VideoLayout
+            android:id="@+id/videoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:loop="true"
+            app:path_or_url="bubbles_video.mp4"
+            app:video_gravity="centerCrop" />
+
+    </RelativeLayout>-->
+</layout>

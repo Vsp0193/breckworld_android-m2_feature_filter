@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0E78EC</color>
+    <color name="colorPrimaryDark">#0E78EC</color>
+    <color name="colorAccent">#0E78EC</color>
+
+    <color name="colorBottomUnselected">#DADADA</color>
+    <color name="colorBottomTextUnselected">#8E8E93</color>
+    <color name="colorBottomSelected">#0E78EC</color>
+    <color name="colorBottomBackground">#26FFFFFF</color>
+    <color name="colorRouteMap">#007AFF</color>
+
+    <color name="colorArviewCardInfoBackground">#E5FFFFFF</color>
+    <color name="colorArviewCardInfoText">#000000</color>
+    <color name="colorDarkGreen">#002433</color>
+    <color name="colorWoodsmoke">#242626</color>
+    <color name="colorBlack">#002433</color>
+    <color name="colorBlackAlpha">#81002433</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorZircon">#F0F2F2</color>
+    <color name="colorBlackType1">#000000</color>
+    <color name="colorBlackType2">#4f4f4f</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorSilver">#bdbdbd</color>
+    <color name="colorGrey">#828282</color>
+    <color name="colorDodgerBlue">#0E78EC</color>
+    <color name="colorMediumAquamarine">#6FCF97</color>
+    <color name="colorButtonBlue">#6DABEF</color>
+    <color name="colorGreen">#19B6C5</color>
+    <color name="colorDarkWhite">#F2F2F2</color>
+    <color name="colorDivider">#E0E0E0</color>
+    <color name="colorRed">#F44336</color>
+
+    <color name="colorDialogBackground">#CBD6E3</color>
+
+    <color name="header_color">#0C3473</color>
+    <color name="color_dark_red">#C51B1C</color>
+    <color name="color_dark_gray">#53494A</color>
+    <color name="light_color">#CD2781A9</color>
+    <color name="green_color">#079E22</color>
+    <color name="start_color">#066F9C</color>
+    <color name="center_color">#1A6A98</color>
+    <color name="end_color">#064883</color>
+</resources>

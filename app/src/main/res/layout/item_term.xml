@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="state"
+                type="com.breckworld.ui.main.searchResults.TermsItemState"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_item_container"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_rounded_green"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/text_view_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:padding="6dp"
+                android:fontFamily="@font/lato_bold"
+                android:maxLines="1"
+                android:gravity="center"
+                android:text="@{state.term}"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="London"
+                tools:ignore="SmallSp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

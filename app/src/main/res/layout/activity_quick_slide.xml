@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.QuickSlideActivity">
+
+    <ImageView
+        android:id="@+id/imageViewBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="-50dp"
+        android:layout_marginTop="-110dp"
+        android:layout_marginEnd="-50dp"
+        android:layout_marginBottom="-80dp"
+        android:background="@drawable/filter_bg"
+        android:scaleType="fitXY" />
+
+    <FrameLayout
+        android:id="@+id/frameLayoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageViewForHeaderAlpha"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/layoutHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:src="@drawable/back_icon" />
+
+            <ImageView
+                android:id="@+id/imageViewLogo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/imageViewBack"
+                android:padding="3dp" />
+
+            <TextView
+                android:id="@+id/textViewCompanyTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/textViewClose"
+                android:layout_toEndOf="@+id/imageViewLogo"
+                android:text="Strattons Hotel"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="15dp"
+                android:text="Close"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewBanners"
+        android:layout_below="@+id/frameLayoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:visibility="gone"/>
+
+    <!--<ImageView
+        android:id="@+id/imageViewImage"
+        android:layout_below="@+id/recyclerViewBanners"
+        android:layout_above="@+id/frameLayoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>-->
+
+    <ImageView
+        android:id="@+id/imageViewShadow"
+        android:layout_below="@+id/recyclerViewBanners"
+        android:layout_above="@+id/frameLayoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66020202"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/layoutCtab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="20dp"
+        android:padding="5dp"
+        android:layout_below="@+id/recyclerViewBanners"
+        android:background="@drawable/bg_rounded_white"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textViewCtab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Collect This Deal"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorWhite"/>
+
+        <ImageView
+            android:id="@+id/imageViewCtab"
+            android:layout_toEndOf="@+id/textViewCtab"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ctab_icon"
+            app:tint="@color/colorWhite"/>
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewQuickSlide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/frameLayoutBottom"
+        android:layout_below="@+id/layoutCtab" />
+
+
+    <FrameLayout
+        android:id="@+id/frameLayoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/imageViewForBottomAlpha"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/layoutBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/layoutBottomIcons"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewOpenTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Open:"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/textViewCompanySubTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Swaffham, nr. town centre"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutBottomIcons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewBottomIcons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="state"
+                type="com.breckworld.ui.main.starsTab.starsClues.StarClueItemState"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_item_container"
+            android:layout_width="match_parent"
+            android:background="?attr/selectableItemBackground"
+            android:onClick="@{()-> state.onItemClick()}"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:layout_height="84dp">
+
+        <ImageView
+                android:id="@+id/image_view_photo"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:scaleType="centerCrop"
+                app:imageUrl="@{state.photoUrl}"
+                app:placeholderId="@{state.placeholderId}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/text_view_title"
+                app:layout_constraintTop_toTopOf="parent"
+                app:radius="@{state.radius}"
+                tools:ignore="ContentDescription"/>
+
+        <ImageView
+                android:id="@+id/image_view_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_star_yellow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/text_view_title"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription"
+                app:layout_constraintHorizontal_bias="0.162"
+                app:layout_constraintVertical_bias="0.0"/>
+
+        <TextView
+                android:id="@+id/text_view_title"
+                android:layout_width="0dp"
+                android:layout_marginEnd="20dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato_regular"
+                android:maxLines="1"
+                android:text="@{state.title}"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/text_view_description"
+                app:layout_constraintEnd_toStartOf="@+id/image_view_photo"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="Alma Powell"/>
+
+        <TextView
+                android:id="@+id/text_view_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato_regular"
+                android:maxLines="3"
+                android:text="@{state.description}"
+                android:textColor="@color/colorGrey"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/text_view_title"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/text_view_title"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_title"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:ignore="SmallSp"
+                tools:text="Experienced Fashion Model Experienced Fashion Model Experienced Fashion Model Experienced Fashion Model Experienced Fashion Model Experienced Fashion Model Experienced Fashion ModelExperienced Fashion Model"/>
+
+        <View
+                android:id="@+id/view_line_1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorSilver"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

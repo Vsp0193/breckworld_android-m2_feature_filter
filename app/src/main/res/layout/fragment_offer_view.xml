@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+                name="viewModel"
+                type="com.breckworld.ui.main.offerViewDialog.OfferViewViewModel"/>
+    </data>
+
+    <FrameLayout
+            android:id="@+id/frame_layout_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorDialogBackground">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_layout_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardview"
+                    style="@style/Widget.MaterialComponents.CardView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginEnd="17dp"
+                    android:layout_marginBottom="22dp"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/colorWhite"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <TextView
+                            android:id="@+id/text_view_title"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="27dp"
+                            android:layout_marginStart="22dp"
+                            android:ellipsize="end"
+                            android:textSize="28sp"
+                            android:fontFamily="@font/lato_bold"
+                            android:textColor="@color/colorBlackType1"
+                            android:maxLines="2"
+                            android:layout_marginEnd="21dp"
+                            tools:text="Castle Acre Ruins"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/image_view_offer"/>
+
+                    <ImageView
+                            android:id="@+id/image_view_offer"
+                            android:layout_width="43dp"
+                            android:layout_height="43dp"
+                            android:src="@drawable/ic_offer_green"
+                            android:layout_marginEnd="15dp"
+                            app:layout_constraintTop_toTopOf="@id/text_view_title"
+                            app:layout_constraintBottom_toBottomOf="@id/text_view_title"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            tools:ignore="ContentDescription"/>
+
+                    <FrameLayout
+                            android:id="@+id/frame_layout_media"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:visibility="gone"
+                            app:layout_constraintDimensionRatio="H,4:3"
+                            android:layout_marginTop="20dp"
+                            tools:background="@color/colorZircon"
+                            app:layout_constrainedWidth="true"
+                            app:layout_constraintTop_toBottomOf="@id/text_view_title"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <ImageView
+                            android:id="@+id/image_view_photo"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:scaleType="centerCrop"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginEnd="30dp"
+                            android:visibility="gone"
+                            app:layout_constraintDimensionRatio="H,1:1"
+                            android:layout_marginTop="22dp"
+                            app:layout_constrainedWidth="true"
+                            app:layout_constraintTop_toBottomOf="@id/text_view_title"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            tools:ignore="ContentDescription"/>
+
+                    <androidx.constraintlayout.widget.Barrier
+                            android:id="@+id/barrier"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:barrierDirection="bottom"
+                            app:constraint_referenced_ids="frame_layout_media,image_view_photo"
+                            tools:ignore="NotSibling"/>
+
+                    <TextView
+                            android:id="@+id/text_view_description"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginEnd="30dp"
+                            android:ellipsize="end"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/lato_regular"
+                            android:textColor="@color/colorBlackType2"
+                            android:maxLines="5"
+                            app:layout_constraintTop_toBottomOf="@id/barrier"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            tools:text="Castle Acre Ruins is a rare and complete example of a Norman settlement that includes a castle, village and church. It&apos;s free and there&apos;s a star at the summit!"/>
+
+                    <TextView
+                            android:id="@+id/text_view_address"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginEnd="30dp"
+                            android:textSize="14sp"
+                            android:textColor="#4f4f4f"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:drawableStart="@drawable/ic_location_green"
+                            android:drawablePadding="4dp"
+                            app:layout_constraintTop_toBottomOf="@id/text_view_description"
+                            app:layout_constraintBottom_toTopOf="@id/view_divider"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            tools:text="Pye&apos;s Lane, Castle Acre, PE32 2XB. Pye&apos;s Lane, Castle Acre, PE32 2XB."
+                            app:layout_constraintVertical_bias="0.86"/>
+
+                    <View
+                            android:id="@+id/view_divider"
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_marginBottom="18dp"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginEnd="18dp"
+                            app:layout_constraintBottom_toTopOf="@+id/floating_action_button_close"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:background="@color/colorDivider"/>
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/floating_action_button_close"
+                            style="@style/Widget.MaterialComponents.FloatingActionButton"
+                            app:fabSize="mini"
+                            android:src="@drawable/ic_close_white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            app:backgroundTint="@color/colorGreen"
+                            app:elevation="1dp"
+                            app:hoveredFocusedTranslationZ="1dp"
+                            app:pressedTranslationZ="1dp"
+                            app:rippleColor="@color/colorSilver"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</layout>

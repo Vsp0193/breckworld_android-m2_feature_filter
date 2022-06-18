@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    // progress
+    <declare-styleable name="ProgressLoadingOverlay">
+        <attr name="handle_click" format="boolean" />
+    </declare-styleable>
+
+    //triangleview
+    <declare-styleable name="TriangleView">
+        <attr name="triangleColor" format="reference" />
+    </declare-styleable>
+</resources>

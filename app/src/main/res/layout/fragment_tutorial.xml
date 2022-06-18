@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+                name="viewModel"
+                type="com.breckworld.ui.main.tutorial.TutorialViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite">
+
+        <ImageView
+                android:id="@+id/image_view_background1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                tools:ignore="ContentDescription"
+                android:background="@drawable/starttutorial_bg3"
+                app:visibility="@{viewModel.counter == 3}"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintVertical_bias="0.0"/>
+
+        <ImageView
+                android:id="@+id/image_view_background2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                tools:ignore="ContentDescription"
+                app:visibility="@{viewModel.counter == 2}"
+                android:background="@drawable/starttutorial_bg2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+                android:id="@+id/image_view_background3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                tools:ignore="ContentDescription"
+                android:background="@drawable/starttutorial_bg1"
+                app:visibility="@{viewModel.counter == 1}"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageButton
+                android:id="@+id/material_button_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/selector_next_btn_white_silver"
+                android:onClick="@{()->viewModel.onNext()}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

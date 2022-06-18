@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.breckworld.ui.main.starCollectDialog.StarCollectDialogViewModel" />
+    </data>
+
+    <FrameLayout
+        android:id="@+id/fl_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorDialogBackground">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardview"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:layout_marginBottom="22dp"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="16dp"
+                        android:textSize="21sp"
+                        app:autoSizeMinTextSize="16sp"
+                        app:autoSizeTextType="uniform"
+                        android:fontFamily="@font/lato_bold"
+                        android:textColor="@color/colorBlackType1"
+                        android:letterSpacing="-0.03"
+                        android:maxLines="2"
+                        android:layout_marginEnd="21dp"
+                        android:text="@string/great_job"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/iv_star" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_collect_star"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center"
+                        tools:text="@string/collected_stars"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/iv_star" />
+
+                    <ImageView
+                        android:id="@+id/iv_star"
+                        android:layout_width="43dp"
+                        android:layout_height="43dp"
+                        android:src="@drawable/ic_star_collect"
+                        android:layout_marginEnd="15dp"
+                        app:layout_constraintTop_toTopOf="@id/tv_title"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_title"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <FrameLayout
+                        android:id="@+id/fl_media"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="H,4:3"
+                        android:layout_marginTop="20dp"
+                        tools:background="@color/colorZircon"
+                        app:layout_constrainedWidth="true"
+                        app:layout_constraintTop_toBottomOf="@id/tv_collect_star"
+                        app:layout_constraintBottom_toTopOf="@id/tv_description"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/tv_description"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/lato_regular"
+                        android:textColor="@color/colorBlackType2"
+                        android:lineSpacingExtra="1sp"
+                        android:maxLines="4"
+                        android:text="@string/you_can_find_all_your_stars"
+                        app:layout_constraintTop_toBottomOf="@id/fl_media"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@+id/vw_divider"
+                        />
+
+                    <View
+                        android:id="@+id/vw_divider"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="18dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginEnd="18dp"
+                        app:layout_constraintBottom_toTopOf="@+id/btn_collected_stars"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:background="@color/colorDivider"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_collected_stars"
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="39dp"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginEnd="14dp"
+                        android:layout_marginBottom="18dp"
+                        android:text="@string/see_collected_stars"
+                        android:fontFamily="@font/lato_regular"
+                        android:textAllCaps="false"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        app:cornerRadius="4dp"
+                        app:backgroundTint="@color/colorGreen"
+                        app:rippleColor="@color/colorSilver"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/btn_close"/>
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/btn_close"
+                        style="@style/Widget.MaterialComponents.FloatingActionButton"
+                        app:fabSize="mini"
+                        android:src="@drawable/ic_close_white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:onClick="@{() -> viewModel.closeDialog()}"
+                        app:backgroundTint="@color/colorGreen"
+                        app:elevation="1dp"
+                        app:hoveredFocusedTranslationZ="1dp"
+                        app:pressedTranslationZ="1dp"
+                        app:rippleColor="@color/colorSilver"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</layout>

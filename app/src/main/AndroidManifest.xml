@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.breckworld">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<!--
+
+    <uses-feature
+        android:name="android.hardware.camera.ar"
+        android:required="false" />
+-->
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activity.LeaderboardActivity"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait"/>
+        <activity
+            android:name=".activity.QuickSlideActivity"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait"/>
+        <activity
+            android:name=".activity.FilterActivity"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait"/>
+        <activity
+            android:name=".activity.MDSInfoActivity"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".activity.ReportAnIssueActivity"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait"/>
+        <activity
+            android:name=".activity.EditProfileActivity"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".activity.WebViewActivity"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".activity.ActivityForFragments"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".activity.IntroActivity"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".activity.PasscodeActivity"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.RegistrationActivity"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustResize"/>
+            <!--android:windowSoftInputMode="stateVisible|adjustPan"--> />
+        <activity
+            android:name=".activity.VisitActivity"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".activity.HomeActivity"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/AppThemeSplash"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBpXmiyUph0juOzWRhkHBUM7hGqRU2Vq_Y" />
+        <meta-data
+            android:name="com.google.ar.core"
+            android:value="optional" />
+    </application>
+
+</manifest>

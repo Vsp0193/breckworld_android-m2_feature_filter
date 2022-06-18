@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/header_color">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/imageViewBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:layout_marginEnd="-10dp"
+            android:src="@drawable/back_icon"
+            android:visibility="gone"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageViewProfile"
+            android:layout_toEndOf="@+id/imageViewBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            app:civ_border_color="@color/colorBlack"
+            app:civ_border_width="0.5dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toStartOf="@+id/imageViewRWS"
+            android:layout_toEndOf="@+id/imageViewProfile"
+            android:background="@drawable/bg_rounded_white">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="-5dp"
+                android:src="@drawable/icon_standered_search" />
+
+            <EditText
+                android:id="@+id/editTextSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="40dp"
+                android:background="@null"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:hint="Search BreckWorld..."
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorBlackType2"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageViewStackSearch"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_search_cat" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imageViewRWS"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/icon_real_world_search" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="corner">4dp</dimen>
+    <dimen name="photo_corner">6dp</dimen>
+    <dimen name="nv_corner">15dp</dimen>
+</resources>

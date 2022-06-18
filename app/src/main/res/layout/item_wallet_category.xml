@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="4dp"
+    android:layout_marginBottom="5dp">
+
+    <FrameLayout
+        android:id="@+id/layoutBorder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="70dp"
+        android:layout_marginTop="7dp">
+
+    <ImageView
+        android:id="@+id/imageViewForTabBorder"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:minWidth="70dp"
+        android:background="@drawable/rounded_border"/>
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="65dp"
+            android:background="@drawable/rounded_border"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:paddingStart="15dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="6dp"
+            android:text="Redeemed"
+            android:maxLines="1"
+            android:textColor="@color/colorWhite"
+            android:textSize="13sp" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textViewCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-12dp"
+        android:layout_toEndOf="@+id/layoutBorder"
+        android:background="@drawable/background_counter"
+        android:backgroundTint="@color/colorRed"
+        android:minWidth="16dp"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical=".5dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="11sp" />
+
+</RelativeLayout>
+

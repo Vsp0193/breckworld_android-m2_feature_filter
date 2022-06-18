@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HistoryFragment">
+
+    <ImageView
+        android:id="@+id/imageViewBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="-50dp"
+        android:layout_marginTop="-110dp"
+        android:layout_marginEnd="-50dp"
+        android:layout_marginBottom="-80dp"
+        android:background="@drawable/filter_bg"
+        android:scaleType="fitXY" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewBanners"
+        android:layout_width="match_parent"
+        android:layout_height="35dp" />
+
+    <RelativeLayout
+        android:id="@+id/layoutCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recyclerViewBanners"
+        android:layout_marginTop="8dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/layoutFilterButtons" />
+
+        <RelativeLayout
+            android:id="@+id/layoutFilterButtons"
+            android:layout_width="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imageViewSort"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toStartOf="@+id/imageViewFilter"
+                android:src="@drawable/icon_sort" />
+
+            <ImageView
+                android:id="@+id/imageViewFilter"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_filter" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutCategory"
+        android:layout_marginEnd="10dp" />
+
+    <LinearLayout
+        android:id="@+id/layoutNoData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_star_yellow" />
+
+        <TextView
+            android:id="@+id/textViewNoData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

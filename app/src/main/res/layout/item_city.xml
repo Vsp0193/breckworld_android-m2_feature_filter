@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="state"
+                type="com.breckworld.ui.main.search.CityItemState"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_item_container"
+            android:background="@color/colorWhite"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="16dp"
+            android:onClick="@{()-> state.onItemClick()}"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/image_view_photo"
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/selector_circle"
+                app:circleImageResId="@{state.photoResId}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription"/>
+
+        <TextView
+                android:id="@+id/text_view_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato_regular"
+                android:maxLines="1"
+                android:gravity="center"
+                android:layout_marginTop="11dp"
+                android:text="@{state.title}"
+                android:textColor="@color/colorBlackType2"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_view_photo"
+                tools:text="London"
+                tools:ignore="SmallSp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.FilterActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="-50dp"
+        android:layout_marginTop="-110dp"
+        android:layout_marginEnd="-50dp"
+        android:layout_marginBottom="-80dp"
+        android:background="@drawable/filter_bg"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/textViewClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="Close"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/layoutMainContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textViewClose">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonClearFilter"
+            android:layout_width="160dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/clear_filters_button" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/buttonSearch"
+            android:layout_below="@+id/buttonClearFilter"
+            android:layout_marginBottom="20dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonSearch"
+            android:layout_width="170dp"
+            android:layout_height="32dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/search_button" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutNoData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_star_yellow" />
+
+        <TextView
+            android:id="@+id/textViewNoData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/no_data_available"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

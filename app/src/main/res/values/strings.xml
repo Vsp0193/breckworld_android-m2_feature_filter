@@ -1,0 +1,210 @@
+<resources>
+    <string name="app_name">BreckWorld</string>
+
+    // error
+    <string name="no_network_error">No internet</string>
+    <string name="general_error_handler_server_error">Server error. Pleasy try again</string>
+    <string name="general_error_handler_unknown_error">Oops! Something wrong. Please try later</string>
+    <string name="general_error_validation_errors">Validation fields error</string>
+
+    // bottom menu
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="arview">AR View</string>
+    <string name="stars">Stars</string>
+    <string name="wallet">Wallet</string>
+
+    <string name="latitude">Latitude: %.7f</string>
+    <string name="longitude">Longitude: %.7f</string>
+    <string name="accuracy">Accuracy: %.7f</string>
+    <string name="altitude">Altitude: %.7f</string>
+    <string name="bearing">Bearing: %.7f</string>
+    <string name="bearing_to_marker">Bearing to Marker: %.7f</string>
+    <string name="distance">Distance: %.7f</string>
+    <string name="current_marker">Current Marker: %s</string>
+
+    // home
+    <string name="towns_title">360 Towns</string>
+    <string name="fun_title">360 Fun</string>
+    <string name="use_search">Use Search 🔎 to find more</string>
+
+    // star dialog
+    <string name="experience">Experience</string>
+    <string name="website">Website</string>
+
+    // collect star dialog
+    <string name="great_job">Great job!</string>
+    <string name="see_collected_stars">See collected stars</string>
+    <string name="select_special_offer">Select your special offer</string>
+    <string name="select_special_offer2">Select a special offer</string>
+    <string name="you_can_find_all_your_stars">You can find all your stars and level status under Profile</string>
+    <string name="ten_star_collected">Wow, %dth star!</string>
+    <plurals name="collected_star">
+        <item quantity="one">You just collected your %1$dth star at\n%2$s</item>
+        <item quantity="other">You just collected your %1$dth star at\n%2$s</item>
+    </plurals>
+
+    // offer dialog
+    <string name="add_offer_to_wallet">Add offer to wallet</string>
+
+    <string name="google_maps_key">AIzaSyBpXmiyUph0juOzWRhkHBUM7hGqRU2Vq_Y</string>
+
+    <string name="onboard_description">This is Breckworld! If you have an account please Login, if not Sign Up. Time for
+        some fun!
+    </string>
+    <string name="sign_up">Sign up</string>
+    <string name="log_in">Log in</string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="welcome_back">Welcome back</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="create_account_or_login">Create account or Login?</string>
+    <string name="sign_up_description">Join BreckWorld and reach for the Stars! Collect Stars and Offers!</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="register_success">Register Success</string>
+    <string name="login_success">Login Success</string>
+    <string name="terms_of_service_description">1. Use of the App\nBy downloading or using this App, these terms will automatically apply to you. You should make sure that you have read them carefully before doing so. If you do not agree to these terms you must not download or use the App. You may want to print a copy of these terms for your reference.\nYou are also responsible for ensuring that all persons who use or access the App through your internet connection or your device(s) are aware of these terms and the other applicable terms described in clause 2, and that they comply with them.\nIntellectual property rights in or arising from this App and its contents belong to Viewing Online Limited (“the Company”). Use of the App and its contents is limited to your private and non-commercial use purposes only and you must not be further exploit without prior written permission of the Company.\n2. Other applicable terms\nThese terms are supplemented by the Company’s Privacy Policy.\n3. Changes to these terms of use\nThe Company is committed to ensuring that this App is useful and efficient as possible. For that reason, it reserves the right to make changes to the App or withdraw the App, at any time and for any reason.\nThe Company may amend these terms from time to time. Please check these terms regularly to ensure you understand the terms that apply at that time. If you access the App after the Company has made changes to the terms you will be treated as having accepted the change.\n4. Accuracy of Content\nThe App and content is provided for your general information only and the Company gives no guarantees or warranties that it is accurate, complete, up to date nor that it will always be available, be uninterrupted or error free. It is not intended to amount to advice.\nAlthough the Company make reasonable efforts to update the information on its app, the Company makes no representations, warranties or guarantees, whether express or implied that the content on our App is accurate, complete or up-to-date.\nThe content of any services featured in the App are subject to change at any time without notice.\n5. Location Settings\nYou agree to receive pre-programmed notifications on the App if you have turned on locational services on your devices.\n6. Liability\nNothing in these terms shall exclude the Company’s liability where it would be unlawful to do so. This includes the Company’s liability for death or personal injury caused by its negligence or for fraud.\nThe Company shall not be liable for any acts or omissions of any third parties howsoever caused.\nThe Company will not be liable directly, indirectly, incidentally, specially, consequentially or punitively for damages, howsoever caused, resulting from or in connection with the App and any services offered in the App, your access to, use of or inability to use the App, reliance on or downloading from the App, or any delays, inaccuracies in the information or in its transmission, including, without limitation, theft of your device or information or corruption of your information, the inability to use the App, device failure or malfunction.\nThe Company will not be liable for any loss or damage caused by a virus or other technologically harmful material that may infect your device.\nYou must not:\nintroduce any virus to the App;\nin any way attempt to access, alter, de-compile, otherwise interfere with any part of the App.\nuse the App for any unlawful purpose.\nI wish to participate in the App. I understand that there are risks and dangers inherent in participating in walks using this APP.\nI hereby assume all of the risks associated with this APP and to release and hold harmless Viewing Online Limited and Breckland District Council.\nI understand and agree that these terms are binding on my heirs, assigns, next of kin, executors and administrators and legal representatives.\nI certify that I am physically fit and have no health related reasons or problems to preclude my use of the App. I certify that I have not been advised otherwise by a qualified medical person. I understand that I am solely responsible for my health and safety, and I acknowledge that I am physically capable of participating in this activity. This App is designed to be used outdoors, I understand that I will remain aware of the environment I am in and avoid going into inappropriate areas or an area where I am not permitted to be.\n7. Applicable law\nThese terms shall be governed by the laws of England and you and the Company submit to the exclusive jurisdiction of the courts of England to resolve any dispute between you that may arise as a result of these terms or arising out of or in connection with the use of the App.\n8. Safety\nYour safety is of paramount importance to both Breckland District Council and Viewing Online Ltd. It is vital that you stay alert to your surroundings when collecting augmented items in AR View mode. Never look at your phone when crossing roads or when in the vicinity of any potential obstacles that could impact yours or others’ safety. Breckland District Council and Viewing Online Ltd take no responsibility for injury or death associated with usage of the BreckWorld app. Breckland District Council and Viewing Online Ltd also take no responsibility for injury or death associated with using the BreckWorld app in conjunction with a VR Headset/Head Mounted Display (HMD). We urge all users to stay safe and be vigilant while using the BreckWorld app. If you do, you’ll have a fantastic experience.\n9. Special Offer Participating Businesses\nFor every 10 stars that you collect using the BreckWorld app, you will be provided with a list of Special Offers to choose from.\nThese can range from 10% - 50% off entry to local attractions or be discounts for restaurants around Breckland. Simply choose whichever Special Offer works best for you and redeem it on the day you visit.\nIt is important to note that, as a charity trying to generate maximum revenue to help the animals they care for and protect, Banham Zoo are NOT participating in Special Offers. Please do still visit this amazing attraction for a fantastic day out while helping the animals you’ll see there.\n10. Compatibility\nAR View mode is only compatible with iPhone 6s and later released iPhone models. Users can still enjoy the app and virtually explore BreckWorld 360 Experiences on iPhone models earlier than iPhone 6s but may not be able to enjoy the AR View mode features including treasure hunt and floating offers located down Breckland’s High Streets. Breckland District Council and Viewing Online Ltd take no responsibility for any emotional, physical or financial damage related to usage of the BreckWorld app.\nI certify that I have read these terms and fully understand their content. If I am 18 years or younger at the time of participating, my parent or legal guardian has completely reviewed these terms, understands and consents to them and authorises my participation by agreeing to them.</string>
+    <string name="privacy_policy_description">Effective date: October 11, 2018\nViewing Online Limited ("us", "we", or "our") operates the Breck World mobile application (the "Service").\nThis page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.\nWe use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions.\nInformation Collection and Use\nWe collect several different types of information for various purposes to provide and improve our Service to you.\nTypes of Data Collected\nPersonal Data\nWhile using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). Personally identifiable information may include, but is not limited to:\nFirst name and last name\nCookies and Usage Data\nUsage Data\nWe may also collect information that your browser sends whenever you visit our Service or when you access the Service by or through a mobile device ("Usage Data").\nThis Usage Data may include information such as your computer\'s Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers and other diagnostic data.\nWhen you access the Service by or through a mobile device, this Usage Data may include information such as the type of mobile device you use, your mobile device unique ID, the IP address of your mobile device, your mobile operating system, the type of mobile Internet browser you use, unique device identifiers and other diagnostic data.\nTracking &amp; Cookies Data\nWe use cookies and similar tracking technologies to track the activity on our Service and hold certain information.\nCookies are files with small amount of data which may include an anonymous unique identifier. Cookies are sent to your browser from a website and stored on your device. Tracking technologies also used are beacons, tags, and scripts to collect and track information and to improve and analyse our Service.\nYou can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service.\nExamples of Cookies we use:\nSession Cookies. We use Session Cookies to operate our Service.\nPreference Cookies. We use Preference Cookies to remember your preferences and various settings.\nSecurity Cookies. We use Security Cookies for security purposes.\nUse of Data\nViewing Online Limited uses the collected data for various purposes:\nTo provide and maintain the Service\nTo notify you about changes to our Service\nTo allow you to participate in interactive features of our Service when you choose to do so\nTo provide customer care and support\nTo provide analysis or valuable information so that we can improve the Service\nTo monitor the usage of the Service\nTo detect, prevent and address technical issues\nTransfer Of Data\nYour information, including Personal Data, may be transferred to — and maintained on — computers located outside of your country where the data protection laws may differ than those from your jurisdiction.\nIf you are located outside United Kingdom and choose to provide information to us, please note that we transfer the data, including Personal Data, to United Kingdom and process it there.\nYour consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.\nViewing Online Limited will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of your data and other personal information.\n\nDisclosure Of Data\nLegal Requirements\nViewing Online Limited may disclose your Personal Data in the good faith belief that such action is necessary to:\nTo comply with a legal obligation\nTo protect and defend the rights or property of Viewing Online Limited\nTo prevent or investigate possible wrongdoing in connection with the Service\nTo protect the personal safety of users of the Service or the public\nTo protect against legal liability\nSecurity Of Data\nThe security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.\nService Providers\nWe may employ third party companies and individuals to facilitate our Service ("Service Providers"), to provide the Service on our behalf, to perform Service-related services or to assist us in analysing how our Service is used.\nThese third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.\nAnalytics\nWe may use third-party Service Providers to monitor and analyse the use of our Service.\nGoogle Analytics\nGoogle Analytics is a web analytics service offered by Google that tracks and reports website traffic. Google uses the data collected to track and monitor the use of our Service. This data is shared with other Google services. Google may use the collected data to contextualize and personalize the ads of its own advertising network.\nFor more information on the privacy practices of Google, please visit the Google Privacy &amp; Terms web page: https://policies.google.com/privacy?hl=en\nLinks To Other Sites\nOur Service may contain links to other sites that are not operated by us. If you click on a third party link, you will be directed to that third party\'s site. We strongly advise you to review the Privacy Policy of every site you visit.\nWe have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.\nChildren\'s Privacy\nAs part of our Terms of Service, it is a requirement that parents of users that are 18 years or younger at the time of participating, completely reviewed these terms, understand and consent to them and authorises their participation by agreeing to them.\nChanges To This Privacy Policy\nYou are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.\nContact Us\nIf you have any questions about this Privacy Policy, please contact us:\nBy email: hello@breckworld.com</string>
+    <string name="privacy_url">https://policies.google.com/privacy?hl=en</string>
+    <string name="privacy_email">hello@breckworld.com</string>
+    <string name="star_clues">Star Clues</string>
+    <string name="collected_stars">Collected stars</string>
+    <string name="stars_description">When you collect Stars they appear here. For every 10 stars you collect you get to choose a discount to one of BreckWorld\'s Attractions!</string>
+    <string name="select_city">Select city</string>
+    <string name="search_description">Select your interest and get amazing offers</string>
+    <string name="attractions">Attractions</string>
+    <string name="attractions_hint">Explore all the best cupons near you</string>
+    <string name="free_fun">Free Fun</string>
+    <string name="free_fun_hint">Try the local cousine, eat vegetarian</string>
+    <string name="eat_and_drink">Eat and Drink</string>
+    <string name="eat_and_drink_hint">Have some fun to create lasting memories</string>
+    <string name="search_results">Search Results</string>
+    <string name="wallet_description">Collect Offers and Special Rewards to fill up your Wallet</string>
+    <string name="no_description">No description</string>
+    <string name="settings">Settings</string>
+    <string name="start_tutorial">Start Tutorial</string>
+    <string name="report_issue">Report Issue</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="log_out">Log out</string>
+    <string name="change_profile_photo">Change Profile Photo</string>
+    <string name="save">Save</string>
+    <string name="try_again">Try again</string>
+
+
+    <string name="empty_html" formatted="false"><![CDATA[
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        html, body { margin: 0; padding: 0; background: #000000; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;]]></string>
+    <string name="middleman_html" formatted="false"><![CDATA[
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        html, body { margin: 0; padding: 0; background: #000000; }
+        iframe { border: none; width: 100%; height: 100%; position: fixed; left: 0; top: 0; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;iframe id=&quot;ado-{CONTENTID}&quot; src=&quot;about:blank&quot; webkitAllowFullScreen=&quot;1&quot; mozallowfullscreen=&quot;1&quot; allowFullScreen=&quot;1&quot;&gt;&lt;/iframe&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+            var middleman = &quot;{MIDDLEMAN}&quot;;
+            if (middleman == &quot;{MIDDLE&quot; + &quot;MAN}&quot;) { middleman = &quot;https://{CONTENT_URL}/content/{CONTENTID}?&quot;; }
+            else { middleman = middleman + ((middleman.indexOf(&quot;?&quot;)!=-1)?&quot;&&quot;:&quot;?&quot;) + &quot;id={CONTENTID}&amp;&quot;; }
+            document.getElementById(&quot;ado-{CONTENTID}&quot;).setAttribute(&quot;src&quot;, middleman + &quot;player=true&amp;version=2.11.28&amp;fullscreen=&amp;v=3&amp;experience&amp;videoId={CONTENTID}&amp;referer=%2A&quot;);
+&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://{SCRIPT_URL}/scripts/vroptimal.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+if (window.OmniVirtBridge) OmniVirtBridge.receiveMessage(&quot;initialize&quot;, null);
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;]]></string>
+    <string name="qr_skip">or SKIP</string>
+    <string name="qr_text">Scan symbol on your cardboard</string>
+    <string name="report_issue_description">Please use the text box below to report an issue</string>
+    <string name="send">Send</string>
+    <string name="error">Error</string>
+    <string name="report_issue_success_message">Thanks for reporting an issue. We will use the email address you inputted when creating your BreckWorld account to reply</string>
+    <string name="start_tutorial_title">Start tutorial</string>
+    <string name="start_tutorial_message">Do you want to start tutorial?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="guide_home_1">Press Play and Stephen Fry will tell you all about what’s inside BreckWorld and how to play</string>
+    <string name="guide_home_2">Video Controls: The bottom right button goes full screen. Tilt your phone to landscape when in full screen mode for the best quality and swipe your finger to look around. In full screen landscape mode you can tap the Headset button to experience it in VR if you have a Headset.</string>
+    <string name="guide_home_3">Experience all five of BreckWorld’s 360 Towns by tapping an image and pressing Play</string>
+    <string name="guide_home_4">Experience a selection of BreckWorld’s 360 Attractions – use the Search tab to find lots more</string>
+    <string name="guide_home_5">The Home tab always returns you to this screen</string>
+    <string name="guide_home_6">Use the Search tab to find all the Attractions, Free Fun and Places to Eat &amp; Drink inside BreckWorld</string>
+    <string name="guide_home_7">Use the AR View tab navigate your way to Treasure, collect Rewards and find Offers floating down our High Streets</string>
+    <string name="guide_home_8">Use the Stars tab to see 360 Clues about where BreckWorld’s 100 Stars are hidden and to keep track of all the Stars you’ve already collected</string>
+    <string name="guide_home_9">Use the Wallet tab to see all of the Rewards and Offers that you’ve collected and redeemed inside BreckWorld</string>
+    <string name="guide_search_1">Choose if you’d like to search All BreckWorld or a specific town</string>
+    <string name="guide_search_2">The Attractions category is to search for paid attractions</string>
+    <string name="guide_search_3">The Free Fun category is to search for any fun that costs nothing to enjoy</string>
+    <string name="guide_search_4">The Eat &amp; Drink category is to search for places you can eat or grab a drink</string>
+    <string name="guide_arview_1">The top half of the screen is where you can see treasure floating in the air and tap to collect it. Pinch zoom the bottom half (Map) to see routes to the closest Stars</string>
+    <string name="guide_stats_1">Tap to open each Star Clue to get a better idea of where each Star is located</string>
+    <string name="guide_stats_2">Tap the Collected Stars tab to see all of the Stars you’ve collected on your adventures around BreckWorld</string>
+    <string name="guide_wallet_1">All Rewards and Offers that you’ve collected and redeemed on your adventure are stored here</string>
+    <string name="guide_wallet_2">All of your Profile and Settings are contained inside this button</string>
+    <string name="guide_wallet_3">This button contains information about BreckWorld such as ToS, Privacy Policy and an option to Report an Issue</string>
+    <string name="adults">Adults</string>
+    <string name="children">Children</string>
+    <string name="claim_coupon">Claim coupon</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="visit_this_page"><u>Visit this page</u></string>
+    <string name="show_this_deal"><u>Show this deal</u></string>
+    <string name="please_check_your_internet_connection">Please check your internet connection</string>
+    <string name="loading">Loading...</string>
+    <string name="welcome_back_to_breckworld">Welcome back to BreckWorld!</string>
+    <string name="login_to_your_existing_account_of_breckworld">Login to your existing account of BreckWorld.</string>
+    <string name="next">Next</string>
+    <string name="email_address">Email address</string>
+    <string name="don_t_have_an_account_register_here">Don\'t have an account? <b>Register here</b></string>
+    <string name="welcome_to_breckworld">Welcome to BreckWorld!</string>
+    <string name="please_create_your_account_to_start_the_fun">Please create your account to start the fun</string>
+    <string name="last_name_">Last name</string>
+    <string name="first_name_">First name</string>
+    <string name="we_ve_sent_a_new_passcode">We\'ve sent a new passcode...</string>
+    <string name="already_have_an_account_login_here">Already have an account? <b>Login here</b></string>
+    <string name="resend_passcode">Resend passcode?</string>
+    <string name="dot">\u25CF</string>
+    <string name="app_intro">App Intro</string>
+    <string name="skip_intro">skip intro</string>
+    <string name="enter_the_5_digit_verification_code_you_just_received_via_email_please_check_junk_folder_too">Enter the 5-digit verification code you just received via email (please check junk folder too)</string>
+    <string name="are_you_sure_want_to_logout">Are you sure want to logout ?</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="forgot_passcode">Forgot Passcode?</string>
+    <string name="please_enter_the_passcode">Please enter the passcode...</string>
+    <string name="enter_the_5_digits_verification_code_you_have">Enter the 5-digits verification code you have.</string>
+    <string name="please_enter_your_email_address">Please enter your email address.</string>
+    <string name="please_enter_valid_email_address">Please enter valid email address.</string>
+    <string name="please_enter_your_first_name">Please enter your first name</string>
+    <string name="please_enter_your_last_name">Please enter your last name</string>
+    <string name="update">Update</string>
+    <string name="permission_alert">Permission Alert</string>
+    <string name="alert_title">Alert</string>
+    <string name="location_permission_description">Please enable GPS permission in setting, so that we can easily show you the location.</string>
+    <string name="location_enable">Please enable GPS location.</string>
+
+    <string name="mandatory_permission_access_required">Mandatory permission  access required</string>
+    <string name="location_permission_access_required">Please Allow The Location Access Permission.</string>
+
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="please_enter_your_message">Please enter your message</string>
+    <string name="we_have_sent_a_new_passcode_to_your_registered_email_id">We have sent a new passcode to your registered email id.</string>
+    <string name="no_data_available">No data available</string>
+</resources>

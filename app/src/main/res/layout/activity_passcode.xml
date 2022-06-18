@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PasscodeActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_image" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#800A0A0B" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layoutTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/breck_world_logo" />
+
+                <TextView
+                    android:id="@+id/textViewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/we_ve_sent_a_new_passcode"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewDes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:text="@string/enter_the_5_digits_verification_code_you_have"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <com.chaos.view.PinView
+                android:id="@+id/pinView"
+                style="@style/PinWidget.PinView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/layoutKeyboard"
+                android:layout_centerHorizontal="true"
+                android:cursorVisible="false"
+                android:inputType="text"
+                android:padding="5dp"
+                android:hint="◯◯◯◯◯"
+                android:textColorHint="@color/colorWhite"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:cursorColor="@color/colorBlack"
+                app:cursorWidth="2dp"
+                app:itemCount="5"
+                app:itemHeight="40dp"
+                app:itemRadius="4dp"
+                app:itemSpacing="0dp"
+                app:itemWidth="25dp"
+                app:lineColor="@color/colorTransparent"
+                app:lineWidth="2dp"
+                app:viewType="rectangle"
+                android:clickable="false"
+                android:editable="false"
+                android:focusable="false"
+                android:keyboardNavigationCluster="false"/>
+
+            <include
+                android:id="@+id/layoutKeyboard"
+                layout="@layout/keyboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textViewForgotPassword"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/textViewForgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:text="@string/forgot_passcode"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <com.breckworld.view.ProgressLoadingOverlay
+        android:id="@+id/layoutProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:handle_click="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

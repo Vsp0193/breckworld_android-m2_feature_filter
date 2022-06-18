@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+
+    <data>
+
+        <variable
+                name="viewModel"
+                type="com.breckworld.ui.main.demo.EmptyViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:text="Logout"
+                android:textColor="@android:color/holo_blue_dark"
+                android:gravity="center"
+                android:onClick="@{()->viewModel.onLogout()}"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="16sp"
+                app:autoSizeMaxTextSize="40sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

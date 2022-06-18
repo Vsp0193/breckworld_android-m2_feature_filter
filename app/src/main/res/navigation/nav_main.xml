@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/action_home">
+
+    <fragment
+        android:id="@+id/action_home"
+        android:name="com.breckworld.ui.main.home.HomeFragment"
+        android:label="Home" />
+    <!--android:name="com.breckworld.fragment.HomeFragment1"-->
+
+    <fragment
+        android:id="@+id/action_search"
+        android:name="com.breckworld.ui.main.search.SearchFragment"
+        android:label="Search">
+
+        <action
+            android:id="@+id/action_action_search_to_searchResultsFragment"
+            app:destination="@id/searchResultsFragment"
+            app:enterAnim="@animator/slide_show_fragment_1"
+            app:exitAnim="@animator/slide_hide_fragment_2"
+            app:popEnterAnim="@animator/slide_show_back_fragment_3"
+            app:popExitAnim="@animator/slide_hide_back_fragment_4" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/action_arview"
+        android:name="com.breckworld.ui.main.arview.ArviewFragment"
+        android:label="ArView" />
+
+    <fragment
+        android:id="@+id/action_stars"
+        android:name="com.breckworld.ui.main.starsTab.StarsTabFragment"
+        android:label="Stars" />
+
+    <fragment
+        android:id="@+id/action_wallet"
+        android:name="com.breckworld.ui.main.wallet.WalletFragment"
+        android:label="Wallet">
+
+        <action
+            android:id="@+id/action_action_wallet_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@animator/slide_show_fragment_1"
+            app:exitAnim="@animator/slide_hide_fragment_2"
+            app:popEnterAnim="@animator/slide_show_back_fragment_3"
+            app:popExitAnim="@animator/slide_hide_back_fragment_4" />
+
+        <action
+            android:id="@+id/action_action_wallet_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@animator/slide_show_fragment_1"
+            app:exitAnim="@animator/slide_hide_fragment_2"
+            app:popEnterAnim="@animator/slide_show_back_fragment_3"
+            app:popExitAnim="@animator/slide_hide_back_fragment_4" />
+        <action
+            android:id="@+id/action_action_wallet_to_offerPreviewFragment"
+            app:destination="@id/offerPreviewFragment"
+            app:enterAnim="@anim/anim_show_up"
+            app:exitAnim="@anim/anim_show_down_out"
+            app:popExitAnim="@anim/anim_show_down" />
+        <action
+            android:id="@+id/action_action_wallet_to_offerViewFragment"
+            app:destination="@id/offerViewFragment"
+            app:enterAnim="@anim/anim_show_up"
+            app:exitAnim="@anim/anim_show_down_out"
+            app:popExitAnim="@anim/anim_show_down" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/star_dialog"
+        android:name="com.breckworld.ui.main.stardialog.StarDialogFragment"
+        android:label="StarDialogFragment" />
+
+    <action
+        android:id="@+id/action_global_to_star_dialog"
+        app:destination="@+id/star_dialog"
+        app:enterAnim="@anim/anim_show_up"
+        app:exitAnim="@anim/anim_show_down_out"
+        app:popExitAnim="@anim/anim_show_down" />
+
+    <fragment
+        android:id="@+id/starInfoDialogFragment"
+        android:name="com.breckworld.ui.main.starInfoDialog.StarInfoDialogFragment"
+        android:label="StarInfoDialogFragment" />
+
+    <action
+        android:id="@+id/action_global_starInfoDialogFragment"
+        app:destination="@id/starInfoDialogFragment"
+        app:enterAnim="@anim/anim_show_up"
+        app:exitAnim="@anim/anim_show_down_out"
+        app:popExitAnim="@anim/anim_show_down" />
+
+    <fragment
+        android:id="@+id/specialOfferFragment"
+        android:name="com.breckworld.ui.main.specialOffer.SpecialOfferFragment"
+        android:label="SpecialOfferFragment">
+
+        <action
+            android:id="@+id/action_specialOffer_to_OfferDialogFragment"
+            app:destination="@id/offer_dialog"
+            app:enterAnim="@animator/slide_show_fragment_1"
+            app:exitAnim="@animator/slide_hide_fragment_2"
+            app:popEnterAnim="@animator/slide_show_back_fragment_3"
+            app:popExitAnim="@animator/slide_hide_back_fragment_4" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/star_collect_dialog"
+        android:name="com.breckworld.ui.main.starCollectDialog.StarCollectDialogFragment"
+        android:label="StarCollectDialogFragment">
+
+        <action
+            android:id="@+id/action_collect_star_to_starsFragment"
+            app:destination="@id/action_stars"
+            app:enterAnim="@animator/slide_show_fragment_1"
+            app:exitAnim="@animator/slide_hide_fragment_2"
+            app:popEnterAnim="@animator/slide_show_back_fragment_3"
+            app:popExitAnim="@animator/slide_hide_back_fragment_4" />
+
+        <action
+            android:id="@+id/action_collect_star_to_specialOfferFragment"
+            app:destination="@id/specialOfferFragment"
+            app:enterAnim="@animator/slide_show_fragment_1"
+            app:exitAnim="@animator/slide_hide_fragment_2"
+            app:popEnterAnim="@animator/slide_show_back_fragment_3"
+            app:popExitAnim="@animator/slide_hide_back_fragment_4" />
+
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_to_star_collect_dialog"
+        app:destination="@+id/star_collect_dialog"
+        app:enterAnim="@anim/anim_show_up"
+        app:exitAnim="@anim/anim_show_down_out"
+        app:popExitAnim="@anim/anim_show_down" />
+
+    <fragment
+        android:id="@+id/offer_dialog"
+        android:name="com.breckworld.ui.main.offerdialog.OfferDialogFragment"
+        android:label="OfferDialogFragment" />
+
+    <action
+        android:id="@+id/action_global_to_offer_dialog"
+        app:destination="@+id/offer_dialog"
+        app:enterAnim="@anim/anim_show_up"
+        app:exitAnim="@anim/anim_show_down_out"
+        app:popExitAnim="@anim/anim_show_down" />
+
+    <fragment
+        android:id="@+id/searchResultsFragment"
+        android:name="com.breckworld.ui.main.searchResults.SearchResultsFragment"
+        android:label="SearchResultsFragment" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.breckworld.ui.main.settings.SettingsFragment"
+        android:label="SettingsFragment">
+
+        <action
+            android:id="@+id/action_settingsFragment_to_privacyPolicyFragment2"
+            app:destination="@id/privacyPolicyFragment2"
+            app:enterAnim="@animator/slide_show_fragment_1"
+            app:exitAnim="@animator/slide_hide_fragment_2"
+            app:popEnterAnim="@animator/slide_show_back_fragment_3"
+            app:popExitAnim="@animator/slide_hide_back_fragment_4" />
+
+        <action
+            android:id="@+id/action_settingsFragment_to_termsOfServiceFragment2"
+            app:destination="@id/termsOfServiceFragment2"
+            app:enterAnim="@animator/slide_show_fragment_1"
+            app:exitAnim="@animator/slide_hide_fragment_2"
+            app:popEnterAnim="@animator/slide_show_back_fragment_3"
+            app:popExitAnim="@animator/slide_hide_back_fragment_4" />
+        <action
+            android:id="@+id/action_settingsFragment_to_reportIssueFragment"
+            app:destination="@id/reportIssueFragment"
+            app:enterAnim="@animator/slide_show_fragment_1"
+            app:exitAnim="@animator/slide_hide_fragment_2"
+            app:popEnterAnim="@animator/slide_show_back_fragment_3"
+            app:popExitAnim="@animator/slide_hide_back_fragment_4" />
+        <action
+            android:id="@+id/action_settingsFragment_to_tutorialFragment"
+            app:destination="@id/tutorialFragment"
+            app:enterAnim="@animator/slide_show_fragment_1"
+            app:exitAnim="@animator/slide_hide_fragment_2"
+            app:popEnterAnim="@animator/slide_show_back_fragment_3"
+            app:popExitAnim="@animator/slide_hide_back_fragment_4" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/termsOfServiceFragment2"
+        android:name="com.breckworld.ui.login.termsOfService.TermsOfServiceFragment"
+        android:label="TermsOfServiceFragment" />
+
+    <fragment
+        android:id="@+id/privacyPolicyFragment2"
+        android:name="com.breckworld.ui.login.privacyPolicy.PrivacyPolicyFragment"
+        android:label="PrivacyPolicyFragment" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.breckworld.ui.main.profile.ProfileFragment"
+        android:label="ProfileFragment">
+
+        <action
+            android:id="@+id/action_profileFragment_to_settingsFragment2"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@animator/slide_show_fragment_1"
+            app:exitAnim="@animator/slide_hide_fragment_2"
+            app:popEnterAnim="@animator/slide_show_back_fragment_3"
+            app:popExitAnim="@animator/slide_hide_back_fragment_4" />
+
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment"
+            app:enterAnim="@animator/slide_show_fragment_1"
+            app:exitAnim="@animator/slide_hide_fragment_2"
+            app:popEnterAnim="@animator/slide_show_back_fragment_3"
+            app:popExitAnim="@animator/slide_hide_back_fragment_4" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.breckworld.ui.main.editProfile.EditProfileFragment"
+        android:label="EditProfileFragment" />
+    <fragment
+        android:id="@+id/reportIssueFragment"
+        android:name="com.breckworld.ui.main.reportIssue.ReportIssueFragment"
+        android:label="ReportIssueFragment" />
+    <fragment
+        android:id="@+id/tutorialFragment"
+        android:name="com.breckworld.ui.main.tutorial.TutorialFragment"
+        android:label="TutorialFragment">
+        <action
+            android:id="@+id/action_tutorialFragment_to_action_home"
+            app:destination="@id/action_home"
+            app:enterAnim="@animator/slide_show_fragment_1"
+            app:exitAnim="@animator/slide_hide_fragment_2"
+            app:popEnterAnim="@animator/slide_show_back_fragment_3"
+            app:popExitAnim="@animator/slide_hide_back_fragment_4"
+            app:popUpTo="@+id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/offerPreviewFragment"
+        android:name="com.breckworld.ui.main.offerPreviewDialog.OfferPreviewFragment"
+        android:label="OfferPreviewFragment" />
+    <fragment
+        android:id="@+id/offerViewFragment"
+        android:name="com.breckworld.ui.main.offerViewDialog.OfferViewFragment"
+        android:label="OfferViewFragment" />
+
+</navigation>

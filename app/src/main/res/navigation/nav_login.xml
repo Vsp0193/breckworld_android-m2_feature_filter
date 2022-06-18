@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_login"
+    app:startDestination="@id/onboard_fragment">
+
+    <fragment
+        android:id="@+id/onboard_fragment"
+        android:name="com.breckworld.ui.login.onboard.OnboardFragment"
+        android:label="OnboardFragment">
+
+        <action
+            android:id="@+id/action_onboard_fragment_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:enterAnim="@animator/slide_show_fragment_1"
+            app:exitAnim="@animator/slide_hide_fragment_2"
+            app:popEnterAnim="@animator/slide_show_back_fragment_3"
+            app:popExitAnim="@animator/slide_hide_back_fragment_4" />
+
+        <action
+            android:id="@+id/action_onboard_fragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:enterAnim="@animator/slide_show_fragment_1"
+            app:exitAnim="@animator/slide_hide_fragment_2"
+            app:popEnterAnim="@animator/slide_show_back_fragment_3"
+            app:popExitAnim="@animator/slide_hide_back_fragment_4" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.breckworld.ui.login.signIn.SignInFragment"
+        android:label="SignInFragment">
+
+        <action
+            android:id="@+id/action_signInFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+        <action android:id="@+id/action_signInFragment_to_tutorialFragment2" app:destination="@id/tutorialFragment2"/>
+    </fragment>
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.breckworld.ui.main.MainActivity"
+        android:label="MainActivity" />
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.breckworld.ui.login.signUp.SignUpFragment"
+        android:label="SignUpFragment">
+
+        <action
+            android:id="@+id/action_signUpFragment_to_signInFragment2"
+            app:destination="@id/signInFragment"
+            app:enterAnim="@animator/slide_show_fragment_1"
+            app:exitAnim="@animator/slide_hide_fragment_2"
+            app:popEnterAnim="@animator/slide_show_back_fragment_3"
+            app:popExitAnim="@animator/slide_hide_back_fragment_4"
+            app:popUpTo="@+id/onboard_fragment" />
+    </fragment>
+    <fragment android:id="@+id/termsOfServiceFragment"
+              android:name="com.breckworld.ui.login.termsOfService.TermsOfServiceFragment"
+              android:label="TermsOfServiceFragment"/>
+    <action android:id="@+id/action_global_termsOfServiceFragment" app:destination="@id/termsOfServiceFragment"
+            app:enterAnim="@animator/slide_show_fragment_1" app:exitAnim="@animator/slide_hide_fragment_2"
+            app:popEnterAnim="@animator/slide_show_back_fragment_3"
+            app:popExitAnim="@animator/slide_hide_back_fragment_4"/>
+    <fragment android:id="@+id/privacyPolicyFragment"
+              android:name="com.breckworld.ui.login.privacyPolicy.PrivacyPolicyFragment"
+              android:label="PrivacyPolicyFragment"/>
+    <action android:id="@+id/action_global_privacyPolicyFragment" app:destination="@id/privacyPolicyFragment"
+            app:enterAnim="@animator/slide_show_fragment_1" app:exitAnim="@animator/slide_hide_fragment_2"
+            app:popEnterAnim="@animator/slide_show_back_fragment_3"
+            app:popExitAnim="@animator/slide_hide_back_fragment_4"/>
+    <fragment android:id="@+id/tutorialFragment2" android:name="com.breckworld.ui.main.tutorial.TutorialFragment"
+              android:label="TutorialFragment">
+        <action android:id="@+id/action_tutorialFragment2_to_mainActivity" app:destination="@id/mainActivity"
+        />
+    </fragment>
+</navigation>

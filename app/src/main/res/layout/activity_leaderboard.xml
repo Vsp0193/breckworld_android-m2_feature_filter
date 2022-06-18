@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    tools:context=".activity.LeaderboardActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageViewForHeaderAlpha"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/layoutHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:src="@drawable/back_icon"/>
+
+            <ImageView
+                android:id="@+id/imageViewLogo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="-8dp"
+                android:layout_toEndOf="@+id/imageViewBack"
+                android:padding="3dp" />
+
+            <TextView
+                android:id="@+id/textViewCompanyTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:layout_toEndOf="@+id/imageViewLogo"
+                android:text="Strattons Hotel"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/imageViewImage"
+        android:layout_below="@+id/frameLayoutHeader"
+        android:layout_above="@+id/frameLayoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/imageViewShadow"
+        android:layout_below="@+id/frameLayoutHeader"
+        android:layout_above="@+id/frameLayoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99020202"/>
+
+    <TextView
+        android:id="@+id/textViewLeaderboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frameLayoutHeader"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="15dp"
+        android:text="Leaderboard"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewLeaderboard"
+        android:layout_below="@+id/textViewLeaderboard"
+        android:layout_above="@+id/frameLayoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"/>
+
+    <FrameLayout
+        android:id="@+id/frameLayoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/imageViewForBottomAlpha"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/layoutBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/layoutBottomIcons"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewOpenTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Open:"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/textViewCompanySubTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Swaffham, nr. town centre"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutBottomIcons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewBottomIcons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>
